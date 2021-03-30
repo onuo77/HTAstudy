@@ -11,8 +11,8 @@ public class pj3 {
 		int sum = 0;
 		
 		while(num > 0) {
-			sum += num%10;
-			num /= 10;
+			sum += num%10; 	// 10으로 나누면 나머지 연산자를 사용해 입력받은 num의 마지막 자리 구해짐
+			num /= 10;	// num을 10으로 나눠서 맨뒤부터 숫자 줄여가기
 		}
 		System.out.println("합 : " + sum);
 	}
