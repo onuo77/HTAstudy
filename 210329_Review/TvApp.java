@@ -15,5 +15,6 @@ public class TvApp {
 		tv.tvChannelDown();
 		tv.tvChannelUp();
 		tv.tvChannelUp();
+		tv.TvTurnOff();
 	}
 }

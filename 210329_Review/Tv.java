@@ -27,4 +27,9 @@ public class Tv {
 		System.out.println("현재 TV 채널 : " + channel);
 		System.out.println();
 	}
+	
+	void TvTurnOff() {
+		power = !power;
+		System.out.println("현재 전원 상태 : " + power);
+	}
 }
