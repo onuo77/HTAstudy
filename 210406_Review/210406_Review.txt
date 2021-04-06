@@ -1,0 +1,105 @@
+2021 - 04 - 06 (다형성)
+
+1.
+/*Car class*/
+private String color;
+//getter,setter 생성
+//drive 메소드 (Driving)
+//stop 메소드(Stop!)
+-----------------------------------------------------------
+/*PoliceCar class extends Car*/
+//patrol 메소드 (Patrolling!!!)
+-----------------------------------------------------------
+/*FireTruck class extends Car*/
+private int water;
+//getter,setter 생성
+//suppressFire 메소드 (Fire suppression!!!!)
+-----------------------------------------------------------
+/*Panzer extends PoliceCar*/
+private String weapon;
+//getter,setter 생성
+//fireWeapon 메소드 (Fire a weapon!!!)
+-----------------------------------------------------------
+/*ClassCastingApp class*/
+//Panzer 타입의 참조변수 car1로 Panzer객체 생성
+//PoliceCar 타입의 참조변수 car2로 Panzer객체 생성
+//Car 타입의 참조변수 car3로 Panzer객체
+
+//### Panzer 타입의 참조변수로 Panzer객체 참조하기
+//### PoliceCar 타입의 참조변수로 Panzer객체 참조하기
+//### Car 타입의 참조변수로 Panzer객체 참조하기
+-----------------------------------------------------------
+/*ClassCastingApp2 class*/
+//Car타입의 참조변수 car1로 Car객체 생성
+//Car타입의 참조변수 car2로 PoliceCar 객체 생성
+//Car타입의 참조변수 car3로 Panzer객체 생성
+
+//### Car타입의 참조변수로 Car객체 참조하기
+//### Car타입의 참조변수로 PoliceCar객체 참조하기
+//### Car타입의 참조변수로 Panzer객체 참조하기
+-----------------------------------------------------------
+/*ClassCastingApp3 class*/
+//Car타입의 참조변수 carList로 배열 객체생성 (5)
+
+//향상된 for문을 사용해서 배열에 저장된 다양한 Car객체를 순서대로 조회해서
+// Car객체면 운전기능, 정지기능 실행해보기 (instanceof 사용)
+
+// PoliceCar객체면 운전기능, 정지기능, 순찰기능 실행해보기
+// FireTruck객체면 운전기능, 정지기능, 화재진압기능 실행해보기
+// Panzer객체면 운전기능, 정지기능, 순찰기능, 무기발사기능 실행해보기
+-----------------------------------------------------------
+/*ClassCastingApp4 class*/
+//Car타입의 참조변수 car1로 Car객체 생성
+//FireTruck타입의 참조변수 car2로 FireTruck객체 생성
+//PoliceCar타입의 참조변수 car3로 PoliceCar객체 생성
+//Panzer타입의 참조변수 car4로 Panzer객체 생성
+
+//testDriveAndStop 메소드(매개변수 Car car)
+//testPatrol(PoliceCar car)
+//testFireWeapon(Panzer car)
+
+//### drive/stop 기능 테스트 하기
+//### 순찰기능 테스트 하기
+//### 무기발사 기능 테스트 하기
+
+
+2.
+/*Unit class*/
+private String name;
+private int life;
+//getter,setter 생성
+//공격기능(상대방의 생명력을 1감소시킨다.)
+//수비기능(상대방의 공격을 방어한다.)
+//이동기능(1칸 이동한다.)
+-----------------------------------------------------------
+/*Marine class extends Unit*/
+//attack Override (원거리 적을 공격한다.)
+-----------------------------------------------------------
+/*Firebat class extends Unit*/
+//attack Override (화염을 방사해서 적을 몰살한다.)
+-----------------------------------------------------------
+/*Ghost class extends Unit*/
+//attack Override (적의 기지에 핵폭탄을 투하시킨다.)
+//move Override (클로킹 기능을 이용해서 이동한다.)
+-----------------------------------------------------------
+/*Flight class extends Unit*/
+//move Override (공중을 날아서 이동한다.)
+-----------------------------------------------------------
+/*BattleCruiser class extends Flight*/
+//attack Override (야마토 포를 발사해서 적을 초토화시킨다.)
+-----------------------------------------------------------
+/*GameApp class*/
+//Marine 객체 생성
+//Firebat 객체 생성
+//Ghost 객체 생성
+//BattleCruiser 객체 생성
+
+//### Marine객체의 이동하기/공격하기
+//### Firebat객체의 이동하기/공격하기
+//### Ghost객체의 이동하기/공격하기
+//### BattleCruiser객체의 이동하기/공격하기
+-----------------------------------------------------------
+/*GameApp2 class*/
+//Unit배열 객체 생성(4)
+//units 배열 안에 Marine, Firebat,Ghost, BattleCruiser 객체 저장
+//향상된 for문으로 move(),attack()메소드 출력
