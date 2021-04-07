@@ -1,0 +1,106 @@
+2021 - 04 - 07 (다형성, import static, 추상화)
+
+1.
+/*Person class*/
+//private 멤버변수 name, email, tel 생성
+//Person 기본생성자
+//Person 기본생성자 매개변수 name
+//Person 기본생성자 매개변수 name, email, tel
+//멤버변수 getter 생성
+//displayInfo() 메소드 생성 (이름,이메일,연락처 출력)
+-------------------------------------------------------
+/*Student class - Person 상속*/
+//private 멤버변수 grade, dept 생성
+//멤버변수 getter 생성
+//기본생성자 생성
+//기본생성자 매개변수 name, grade, dept 생성 (super클래스에 name을 받을것)
+//기본생성자 매개변수 name, email, tel, grade 생성 (super클래스에 name,email,tel을 받을 것)
+//기본생성자 매개변수 grade,dept
+//displayInfo() 메소드 생성 (상위 클래스의 displayInfo(), 학년,학과 출력)
+-------------------------------------------------------
+/*Professor class - Person 상속*/
+// private 멤버변수 dept, position 생성
+// 멤버변수 getter 생성
+// 기본생성자 생성
+// 기본생성자 매개변수 name, mail, tel, dept, position 생성
+// displayInfo() override (학과, 직위)
+-------------------------------------------------------
+/*PersonApp class*/
+//Student 객체 생성 후 객체값 입력
+//출력
+//Professor 객체 생성 후 객체값 입력
+//출력
+
+
+2.import static java.lang.Math.*;
+//random(), round(), floor(), ceil() 테스트해보기
+
+
+3.추상화
+/*abstract Chart class*/
+//추출된 공통속성
+//private 멤버변수 title 생성
+//getter,setter 생성
+//abstract draw()메소드 생성
+-------------------------------------------------------
+/*BasicChart class - Chart 상속*/
+//override draw() - 심플한 차트를 그린다.
+-------------------------------------------------------
+/*LineChart class - Chart 상속*/
+//override draw() - 꺽은 선 그래프를 그린다.
+-------------------------------------------------------
+/*Reporter class*/
+// Chart 추상클래스를 구현한 다양한 차트객체를 참조할 참조변수
+// Chart 추상클래스를 구현한 다양한 차트객체의 주소값을 전달받는 setter 메소드
+//chart 참조변수가 참조하는 객체의 최종적으로 재정의된 draw()메소드가 실행되는 createReport()메소드
+-------------------------------------------------------
+/*ReporterApp class*/
+//BasicChart 객체 생성
+//BasicChart 참조변수 setTitle 설정
+
+//LineChart 객체 생성
+//LineChart 참조변수 setTitle 설정
+
+//Reporter 객체 생성
+//Reporter 참조변수 setChart 설정
+//Reporter 참조변수 createReport() 메소드 실행
+
+
+4. 추상화
+/*abstract AbstractBanking class*/
+// 모든 뱅킹작업에서 항상 실행하는 전처리 작업 (은행 전산시스템과 연결하기 / 사용자 인증작업 수행하기)
+// 모든 뱅킹작업에서 항상 실행하는 후처리 작업 (은행 전산시스템과 연결해제하기)
+//실제로 수행하는 작업에 대한 메소드만 설계 - 변하는 부분(job)
+//뱅킹작업에 참여하는 모든 메소드를 순서에 맞게 실행해주는 메소드
+-------------------------------------------------------
+/*ATM class*/
+//AbstractBanking클래스의 구현객체를 참조하는 참조변수
+//AbstractBanking 하위객체의 주소값을 전달받는 setter 메소드
+//뱅킹작업을 실행하는 메소드(뱅킹작업과 관련된 일련의 작업들을 순서대로 실행해주는 process()메소드를 실행)
+-------------------------------------------------------
+/*Deposit class - AbstractBanking 상속*/
+//job override 
+//입금액을 입력받는다
+//금액을 확인한다
+//잔액을 증가시킨다
+//입금결과를 표시한다
+-------------------------------------------------------
+/*Transfer class - AbstractBanking 상속*/
+//job override 
+//이체금액을 입력받는다.
+//수신자 계좌번호를 입력받는다.
+//수신자에게 금액을 이체한다.
+//잔액을 변경한다.
+//이체결과를 화면에 표시한다.
+-------------------------------------------------------
+/*ATMApp class*/
+//Scanner
+//ATM 객체생성
+//Deposit 객체생성
+//Transfer 객체생성
+//1.입금 2.이체 3.종료 while문 생성
+//메뉴번호 입력받기
+//메뉴번호에 따라 출력하기
+//입금작업
+//이체작업
+//종료
