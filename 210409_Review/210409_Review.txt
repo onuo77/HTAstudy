@@ -1,0 +1,87 @@
+2021 - 04 - 09 (인터페이스 복습, 내부 클래스)
+
+1. 인터페이스 복습
+/*Mail class*/
+//sendMail 추상메소드(from, to, title, text)
+--------------------------------------------------
+/*Mail class*/
+//send 추상메소드(to, from, text)
+--------------------------------------------------
+/*SNS class*/
+//post 추상메소드(title,writer,content)
+--------------------------------------------------
+/*EventNotification class*/
+//EventNotification객체가 의존하는 객체의 주소값을 저장할 참조변수 정의(Mail,Messenger,SNS)
+//setter 메소드 정의
+//notice 메소드 매개변수(from,to,title,content)
+--------------------------------------------------
+/*OrderNotification  class*/
+//OrderNotification객체가 의존하는 객체의 주소값을 저장할 참조변수 정의(Mail,Messenger)
+//setter 메소드 정의
+//noticeOrderInfo 메소드 매개변수(from,to,title,content)
+--------------------------------------------------
+/*GoogleMail impl Mail class*/
+//sendMail override 매개변수 값 출력
+--------------------------------------------------
+/*KakaoTalk impl Messenger class*/
+//send override 매개변수 값 출력
+--------------------------------------------------
+/*Line impl Messenger class*/
+//send override 매개변수 값 출력
+--------------------------------------------------
+/*Instagram impl SNS class*/
+//post override 매개변수 값 출력
+--------------------------------------------------
+/*Facebook impl SNS class*/
+//post override 매개변수 값 출력
+--------------------------------------------------
+/*﻿NotificationApp class*/
+//main
+//xxxNotification객체 생성
+//Mail, Messenger, SNS 구현 객체 생성
+//EventNotification객체에 Mail, Messenger, SNS 구현객체의 주소값 전달하기
+//OrderNotification객체에 Mail, Messenger 구현객체의 주소값 전달하기
+//이벤트 안내 보내기
+//주문내역 보내기
+
+
+2. 내부클래스
+/*﻿Stats class*/
+//total 추상메소드
+//average 추상메소드
+--------------------------------------------------
+/*﻿Student class*/
+//은닉화 멤버변수 name,kor,eng,math 생성
+//매개변수가 있는 생성자
+//getter 생성
+--------------------------------------------------
+/*﻿Game class*/
+//은닉화 멤버변수 name,win 생성
+//매개변수가 있는 생성자
+//getter 생성
+--------------------------------------------------
+/*﻿StudentRepo class*/
+//은닉화 Student배열 생성(5)
+//기본 생성자 안에 배열 초기화
+//은닉화 내부클래스 StudentStats impl Stats 생성
+//override total
+//override average
+
+//StudentStats을 Stats으로 반환하는 getStats 메소드 생성
+--------------------------------------------------
+/*﻿GameRepo class*/
+//은닉화 Game배열 생성(5)
+//기본 생성자 안에 배열 초기화
+//은닉화 내부클래스 GameStats impl Stats 생성
+//override total
+//override average
+
+//GameStats을 Stats으로 반환하는 getStats 메소드 생성
+--------------------------------------------------
+/*﻿StatsApp class*/
+//main
+//StudentRepo 객체생성
+//GameRepo 객체생성
+
+//학생 성적에 대한 총점, 평균을 제공하는 Stats 구현객체 얻기
+//게임 기록에 대한 승리횟수, 승률을 제공하는 Stats 구현객체 얻기
